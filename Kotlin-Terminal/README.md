@@ -117,10 +117,36 @@ Specify our app's name, descrition and icon, these attributes are used to identi
 │   ├── mipmap-*/
 │   │   ├── ic_laucher.webp
 ```
-### PERMISSION
-
+#### PERMISSION
+These are the action to send options and available parts that app need to any function or operation.
+```xml
+<manifest>
+	<uses-permission android:name="android.permission.FUNTION"/>
+</manifest>
+```
+#### FEATURES
+Moviles features are very import when user want an app that meets all the specifications we define. If the enviroment where we develop it isn't compatible with the user devices, the performance may be reduce. Therefore, we need to specify that required mobile features.
+```xml
+<manifest>
+	<uses-feature android:name="android.hardware.FEATURE?" android:required="true"/>
+</manifest>
+```
 #### SDK VERSION
-
+Custom Compiling our app is a requirement that we will need in the future to manage tools versions and ensure compatibility between  actions and specify SDK versions. Therefore, it is necessary to especify the SDK version used in the development process.
+```kotlin
+// build.gradle.kts
+android {
+	defaultConfig {
+		applicationId = "com.example.myapp" //Direction
+		// Defines the minimum API level required to run the app
+		minSdkVersion(21)
+		// Specifies the SDK version to test the app
+		targetSdkVersion(33)
+		...
+	}
+}
+// from https://developer.android.com/guide/topics/manifest/manifest-intro#kts
+```
 #### MANIFEST STRUCT
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
