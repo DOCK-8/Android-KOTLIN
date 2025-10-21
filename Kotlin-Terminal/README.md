@@ -147,6 +147,24 @@ android {
 }
 // from https://developer.android.com/guide/topics/manifest/manifest-intro#kts
 ```
+#### ATTRIBUTE
+All elements and components in the manifest file have several attributes that describe their available function. There are two keys exception to this rule:
+1. Alias activity, an alias must follow the **<activity>** tag.
+2. the <application> tag must be the last element inside <manifest> tag.
+Next, the attribute appear in any tag within <manifest> follow a specific struct, wich uses a prefix such as: 
+```xml
+// Single value
+android:Attribute
+// Multiple values
+<intent-filter ... >
+	<action android:name="android.intent.action.EDIT" />
+	<action android:name="android.intent.action.INSERT" />
+	<action android:name="android.intent.action.DELETE" />
+    ...
+</intent-filter>
+```
+#### MORE ELEMENT REFERENCE INFORMATION
+you can see more information in the next [**enlace**](https://developer.android.com/guide/topics/manifest/manifest-intro#reference)
 #### MANIFEST STRUCT
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
