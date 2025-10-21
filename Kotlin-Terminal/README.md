@@ -111,7 +111,7 @@ Specify our app's name, descrition and icon, these attributes are used to identi
 	<string name="app_name">Android Demo Name</string>
 </resources>
 ```
-#```bash
+```bash
 # @mipmap
 ├── res/
 │   ├── mipmap-*/
